@@ -2,8 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 CHOICES = (
-    ("cc","cc"),
-    ("ti","ti")
+    ("CC","CC"),
+    ("TI","TI")
 )
 
 # Create your models here.

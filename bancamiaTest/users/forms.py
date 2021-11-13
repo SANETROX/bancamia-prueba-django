@@ -25,12 +25,13 @@ class UserBancamiaForm(forms.ModelForm):
 class UserBancamiaCreateForm(forms.ModelForm):
     class Meta:
         model = UserBancamia
-        fields = '__all__'
+        fields = ['nombre','apellido','numero_documento','tipo_documento','fecha_nacimiento','ciudad_nacimiento','telefono','username','password']
         labels = {
             'nombre':"Tu nombre"
         }
         widgets = {
         'password': forms.PasswordInput(),
+        'fecha_nacimiento': forms.DateInput(format=('%m/%d/%Y'), attrs={'class':'form-control', 'placeholder':'Select a date', 'type':'date'})
     }
 
     def __init__(self, *args, **kwargs):
