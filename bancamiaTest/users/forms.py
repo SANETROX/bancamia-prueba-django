@@ -3,12 +3,11 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 from django.contrib.auth.forms import UserCreationForm
 from .models import UserBancamia
-from django.contrib.auth.models import User
 
 class UserBancamiaForm(forms.ModelForm):
     class Meta:
         model = UserBancamia
-        fields = ['nombre','password']
+        fields = '__all__'
         labels = {
             'nombre':"Tu nombre"
         }
