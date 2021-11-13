@@ -20,5 +20,7 @@ from users import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('agregar/', views.UserBancamiaCreateView.as_view(), name='create_user'),
-    path('inicio/', views.list_users, name='list_users')
+    path('inicio/', views.list_users, name='list_users'),
+    path('register/', views.RegisterUserCreateView.as_view(), name='register_user'),
+    path('register2/', views.register2, name='register2')
 ]
